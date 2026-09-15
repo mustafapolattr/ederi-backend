@@ -15,5 +15,6 @@ planning or implementing anything.
 - For every feature: understand → analyze → plan → get my approval → implement → test → report (spec §66).
 
 ## Current phase
-Phase 1 — project foundation only (spec §67). No financial features yet.
-Do not start Phase 2 (Accounts/Transactions/Categories) without explicit go-ahead.
+Phase 2 — Accounts, Transactions, Categories (spec §60). Approved to proceed.
+No Budgets/Goals/Recurring Payments/AI/CSV Import yet — those need their own
+go-ahead per phase.
