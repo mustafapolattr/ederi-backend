@@ -14,7 +14,12 @@ planning or implementing anything.
 - Follow the phased plan in spec §60. Do not build features out of order.
 - For every feature: understand → analyze → plan → get my approval → implement → test → report (spec §66).
 
+## Simplicity rule
+- Keep everything simple and shallow. Prefer the most direct implementation.
+- No extra layers, abstractions, or edge-case handling unless the spec requires it.
+- UI: plain forms and lists, minimal screens, no complex state logic.
+- When in doubt, choose less code.
+
 ## Current phase
-Phase 2 — Accounts, Transactions, Categories (spec §60). Approved to proceed.
-No Budgets/Goals/Recurring Payments/AI/CSV Import yet — those need their own
-go-ahead per phase.
+Phase 3 — Dashboard, Budgets, Goals (spec §60). Approved to proceed.
+No Recurring Payments/Forecast/AI/CSV Import yet.
