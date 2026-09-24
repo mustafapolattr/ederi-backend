@@ -18,6 +18,10 @@ def authed_client(user):
     return client
 
 
+def _by_currency(rows, key):
+    return {row["currency"]: row[key] for row in rows}
+
+
 @pytest.mark.django_db
 class TestDashboard:
     def test_requires_authentication(self):
@@ -123,3 +127,14 @@ class TestDashboard:
         goals = response.data["data"]["goals"]
         assert len(goals) == 1
         assert goals[0]["remaining_amount"] == "600.00"
+
+    def test_includes_forecast_and_available_to_spend(self):
+        user = UserFactory()
+        AccountFactory(user=user, currency="USD", initial_balance="1000.00")
+        client = authed_client(user)
+
+        response = client.get("/api/v1/dashboard/")
+
+        data = response.data["data"]
+        assert _by_currency(data["forecast"], "forecast_balance")["USD"] == "1000.00"
+        assert _by_currency(data["available_to_spend"], "available_to_spend")["USD"] == "1000.00"

@@ -21,5 +21,5 @@ planning or implementing anything.
 - When in doubt, choose less code.
 
 ## Current phase
-Phase 3 — Dashboard, Budgets, Goals (spec §60). Approved to proceed.
-No Recurring Payments/Forecast/AI/CSV Import yet.
+Phase 4 — Recurring Payments, Forecast, Available to Spend (spec §60). Approved to proceed.
+No AI/CSV Import/Notifications yet.
