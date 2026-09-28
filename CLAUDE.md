@@ -21,5 +21,5 @@ planning or implementing anything.
 - When in doubt, choose less code.
 
 ## Current phase
-Phase 4 — Recurring Payments, Forecast, Available to Spend (spec §60). Approved to proceed.
-No AI/CSV Import/Notifications yet.
+Phase 5 — AI: transaction parser, insights, chat (spec §60). Approved to proceed.
+No CSV Import/Notifications yet.

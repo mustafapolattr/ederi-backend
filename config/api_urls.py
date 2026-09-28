@@ -11,4 +11,5 @@ urlpatterns = [
     path("budgets/", include("apps.budgets.urls")),
     path("goals/", include("apps.goals.urls")),
     path("recurring-payments/", include("apps.recurring_payments.urls")),
+    path("ai/", include("apps.ai.urls")),
 ]

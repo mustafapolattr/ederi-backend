@@ -182,9 +182,13 @@ CELERY_RESULT_SERIALIZER = "json"
 CELERY_TIMEZONE = TIME_ZONE
 
 # ---------------------------------------------------------------------------
-# AI (spec §37/§45 — placeholder only, not used until the ai module ships)
+# AI (spec §20-21, §27-31, §43, §45)
 # ---------------------------------------------------------------------------
+# Provider specifics live only in apps.ai.llm — swapping providers later
+# means editing only that module.
 LLM_API_KEY = env("LLM_API_KEY", default="")
+LLM_MODEL = env("LLM_MODEL", default="gemini-flash-lite-latest")
+AI_DAILY_REQUEST_LIMIT = env.int("AI_DAILY_REQUEST_LIMIT", default=20)
 
 # ---------------------------------------------------------------------------
 # Logging (spec §54: never log secrets or raw financial data)
